@@ -10,7 +10,7 @@ COPY . .
 
 ## Run the application on the port 8080
 EXPOSE 8083
-CMD ["gunicorn", "--bind", "0.0.0.0:8083", "djangotest.wsgi:application"]
+CMD ["gunicorn", "--bind", "0.0.0.0:8083","djangoservice.wsgi:application"]
 
 
-# docker run -d -p 8083:8083 -v /Users/colvet/Documents/data:/data --network test --name django-app-service colvet/djangotest:latest
+# docker run -d -p 8083:8083 --network test --name django colvet/django-app-service:latest
